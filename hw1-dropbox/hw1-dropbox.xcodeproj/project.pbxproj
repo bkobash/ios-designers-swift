@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1DFDDF301A7EFF6E00FDC5E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFDDF2F1A7EFF6E00FDC5E3 /* AppDelegate.swift */; };
-		1DFDDF321A7EFF6E00FDC5E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFDDF311A7EFF6E00FDC5E3 /* ViewController.swift */; };
 		1DFDDF351A7EFF6E00FDC5E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DFDDF331A7EFF6E00FDC5E3 /* Main.storyboard */; };
 		1DFDDF371A7EFF6E00FDC5E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DFDDF361A7EFF6E00FDC5E3 /* Images.xcassets */; };
 		1DFDDF461A7EFF6E00FDC5E3 /* hw1_dropboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFDDF451A7EFF6E00FDC5E3 /* hw1_dropboxTests.swift */; };
@@ -37,7 +36,6 @@
 		1DFDDF2A1A7EFF6E00FDC5E3 /* hw1-dropbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hw1-dropbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFDDF2E1A7EFF6E00FDC5E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DFDDF2F1A7EFF6E00FDC5E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1DFDDF311A7EFF6E00FDC5E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1DFDDF341A7EFF6E00FDC5E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DFDDF361A7EFF6E00FDC5E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1DFDDF3F1A7EFF6E00FDC5E3 /* hw1-dropboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hw1-dropboxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				1DFDDF2F1A7EFF6E00FDC5E3 /* AppDelegate.swift */,
-				1DFDDF311A7EFF6E00FDC5E3 /* ViewController.swift */,
 				1DFDDF331A7EFF6E00FDC5E3 /* Main.storyboard */,
 				1DFDDF361A7EFF6E00FDC5E3 /* Images.xcassets */,
 				1DFDDF2D1A7EFF6E00FDC5E3 /* Supporting Files */,
@@ -242,7 +239,6 @@
 				1DFDDF541A7F060900FDC5E3 /* CreateAccountRootViewController.swift in Sources */,
 				1DFDDF601A7F2F0C00FDC5E3 /* FileDetailViewController.swift in Sources */,
 				1DFDDF501A7F022800FDC5E3 /* WelcomeViewController.swift in Sources */,
-				1DFDDF321A7EFF6E00FDC5E3 /* ViewController.swift in Sources */,
 				1DFDDF5C1A7F209F00FDC5E3 /* TermsViewController.swift in Sources */,
 				1DFDDF301A7EFF6E00FDC5E3 /* AppDelegate.swift in Sources */,
 				1DFDDF621A7F301800FDC5E3 /* FilesExistingUserViewController.swift in Sources */,
@@ -431,6 +427,7 @@
 				1DFDDF4B1A7EFF6E00FDC5E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DFDDF4C1A7EFF6E00FDC5E3 /* Build configuration list for PBXNativeTarget "hw1-dropboxTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +436,7 @@
 				1DFDDF4E1A7EFF6E00FDC5E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

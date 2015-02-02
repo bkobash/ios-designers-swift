@@ -21,11 +21,10 @@ class FileDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationController!.navigationBarHidden = true;
-        resetActionMenu();
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
+        navigationController!.navigationBarHidden = true;
         resetActionMenu();
     }
 
