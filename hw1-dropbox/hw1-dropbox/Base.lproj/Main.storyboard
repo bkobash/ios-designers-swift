@@ -594,7 +594,6 @@
                     <connections>
                         <outlet property="mainScrollView" destination="f4A-at-2vR" id="ndf-2T-EAW"/>
                         <outlet property="settingsImageview" destination="d2U-rh-cl5" id="tnS-lI-aw7"/>
-                        <segue destination="HB9-kU-JGg" kind="modal" identifier="exitToRootScreen" modalTransitionStyle="crossDissolve" id="uSp-9g-yxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gY-CW-dLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -914,7 +913,6 @@
                     <connections>
                         <outlet property="mainScrollView" destination="qgW-Xp-TZq" id="khg-nS-qee"/>
                         <outlet property="settingsImageview" destination="FlX-1t-dvW" id="bwg-dH-5Om"/>
-                        <segue destination="96M-lh-Qdk" kind="modal" identifier="exitToRootScreen" modalTransitionStyle="crossDissolve" id="OjR-hs-Kfq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8I-1h-Zkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -970,9 +968,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OjR-hs-Kfq"/>
         <segue reference="HTw-dD-kcK"/>
         <segue reference="gV0-cT-WdR"/>
-        <segue reference="uSp-9g-yxP"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -85,7 +85,12 @@ class CreateAccountViewController: UIViewController, UIActionSheetDelegate {
     // buttonIndex is 0 for Cancel
     // buttonIndex ranges from 1-n for the other buttons.
         if (buttonIndex == 0) {
+            firstNameField.resignFirstResponder();
+            lastNameField.resignFirstResponder();
+            emailAddressField.resignFirstResponder();
+            passwordField.resignFirstResponder();
             performSegueWithIdentifier("showNewUserScreen", sender: self);
+            navigationController!.popToRootViewControllerAnimated(true);
         } else if (buttonIndex == 1) {
             performSegueWithIdentifier("showTermsScreen", sender: self);
         }

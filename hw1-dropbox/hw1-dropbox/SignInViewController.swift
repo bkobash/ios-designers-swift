@@ -47,6 +47,7 @@ class SignInViewController: UIViewController, UIActionSheetDelegate  {
     
     @IBAction func onSignInButtonTap(sender: AnyObject) {
         performSegueWithIdentifier("showExistingUserScreen", sender: self);
+        navigationController!.popToRootViewControllerAnimated(true);
     }
     @IBAction func onTroubleButtonTap(sender: AnyObject) {
         var actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle:"Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Forgot Password?", "Single Sign-On");

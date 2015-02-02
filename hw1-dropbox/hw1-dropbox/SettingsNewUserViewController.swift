@@ -37,6 +37,7 @@ class SettingsNewUserViewController: UIViewController {
     */
 
     @IBAction func onSignOutButtonTap(sender: AnyObject) {
-        performSegueWithIdentifier("exitToRootScreen", sender:self);
+        //performSegueWithIdentifier("exitToRootScreen", sender:self);
+        dismissViewControllerAnimated(true, completion: nil);
     }
 }
