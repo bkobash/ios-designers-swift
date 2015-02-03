@@ -12,6 +12,8 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var mainScrollView: UIScrollView!
     
+    var buttonTapped: String!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,11 +32,13 @@ class WelcomeViewController: UIViewController {
     
 
     @IBAction func onSignUpTap(sender: AnyObject) {
-    self.performSegueWithIdentifier("showCreateAccountRoot", sender:self);
+        buttonTapped = "create";
+        self.performSegueWithIdentifier("showLoggedOutRoot", sender:self);
     }
     
     @IBAction func onSignInTap(sender: AnyObject) {
-    self.performSegueWithIdentifier("showSignInRoot", sender:self);
+        buttonTapped = "signin";
+        self.performSegueWithIdentifier("showLoggedOutRoot", sender:self);
     }
     
     
@@ -43,15 +47,10 @@ class WelcomeViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if (segue.identifier == "showCreateAccountRoot") {
-            var destinationNavController = segue.destinationViewController as UINavigationController;
-            var destinationViewController = destinationNavController.viewControllers.first as CreateAccountRootViewController;
-            destinationViewController.cameFromWelcome = true;
-        } else if (segue.identifier == "showSignInRoot") {
-            var destinationNavController = segue.destinationViewController as UINavigationController;
-            var destinationViewController = destinationNavController.viewControllers.first as SignInRootViewController;
-            destinationViewController.cameFromWelcome = true;
-        }
+        var destinationNavController = segue.destinationViewController as UINavigationController;
+        var destinationViewController = destinationNavController.viewControllers.first as SignedOutViewController;
+        destinationViewController.jumpToFlow = buttonTapped;
+        
     }
     
 }
