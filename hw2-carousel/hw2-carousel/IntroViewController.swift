@@ -20,11 +20,10 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var tile5ImageView: UIImageView!;
     @IBOutlet weak var tile6ImageView: UIImageView!;
     
-    var tileImageViews: NSArray!;
-    var tilePileAngles: NSArray!;
-    var tilePileCenters: NSArray!;
-    var tileGridCenters: NSArray!;
-    
+    var tileImageViews: [UIImageView] = [];
+    var tilePileAngles: [Double] = [];
+    var tilePileCenters: [CGPoint] = [];
+    var tileGridCenters: [CGPoint] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,21 +47,21 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
             -10
         ]
         tilePileCenters = [
-            NSValue(CGPoint: CGPoint(x: 40, y: 550)),
-            NSValue(CGPoint: CGPoint(x: 285, y: 540)),
-            NSValue(CGPoint: CGPoint(x: 250, y: 440)),
-            NSValue(CGPoint: CGPoint(x: 160, y: 540)),
-            NSValue(CGPoint: CGPoint(x: 35, y: 430)),
-            NSValue(CGPoint: CGPoint(x: 130, y: 440))
+            CGPoint(x: 40, y: 550),
+            CGPoint(x: 285, y: 540),
+            CGPoint(x: 250, y: 440),
+            CGPoint(x: 160, y: 540),
+            CGPoint(x: 35, y: 430),
+            CGPoint(x: 130, y: 440)
             
         ];
         tileGridCenters = [
-            NSValue(CGPoint: tile1ImageView.center),
-            NSValue(CGPoint: tile2ImageView.center),
-            NSValue(CGPoint: tile3ImageView.center),
-            NSValue(CGPoint: tile4ImageView.center),
-            NSValue(CGPoint: tile5ImageView.center),
-            NSValue(CGPoint: tile6ImageView.center)
+            tile1ImageView.center,
+            tile2ImageView.center,
+            tile3ImageView.center,
+            tile4ImageView.center,
+            tile5ImageView.center,
+            tile6ImageView.center
         ];
         
         mainScrollView.frame = CGRect(x: 0, y: 0, width: 320, height: 568);
@@ -74,15 +73,16 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         
-        var tile: UIImageView!,
-            angle: Float!, scale: Float!;
+        var tile: UIImageView,
+            angle: Double,
+            scale: Float;
         
         for (var i = 0; i < tileImageViews.count; i++) {
-            tile = tileImageViews[i] as UIImageView;
-            angle = tilePileAngles[i] as Float;
+            tile = tileImageViews[i];
+            angle = tilePileAngles[i];
             scale = (i == 0) ? 1 : 1.75;
 
-            tile.center = tilePileCenters[i].CGPointValue();
+            tile.center = tilePileCenters[i];
             tile.transform = CGAffineTransformMakeScale(CGFloat(scale), CGFloat(scale));
             tile.transform = CGAffineTransformRotate(tile.transform, CGFloat(Double(angle) * M_PI / 180));
         }
@@ -112,24 +112,24 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        var scrollY = Float(scrollView.contentOffset.y),
-            tile: UIImageView!,
-            angle: Float!, pileAngle: Float!,
-            scale: Float!, pileScale: Float!,
+        var scrollY: Float = Float(scrollView.contentOffset.y),
+            tile: UIImageView,
+            angle: Float, pileAngle: Double,
+            scale: Float, pileScale: Float,
             tileCenter: CGPoint, tilePileCenter: CGPoint, tileGridCenter: CGPoint;
         
         for (var i = 0; i < tileImageViews.count; i++) {
-            tile = tileImageViews[i] as UIImageView;
+            tile = tileImageViews[i];
             
-            tilePileCenter = tilePileCenters[i].CGPointValue();
-            tileGridCenter = tileGridCenters[i].CGPointValue();
+            tilePileCenter = tilePileCenters[i];
+            tileGridCenter = tileGridCenters[i];
             tileCenter = CGPoint(
                 x: CGFloat(convertValue(scrollY, 0, 568, Float(tilePileCenter.x), Float(tileGridCenter.x))),
                 y: CGFloat(convertValue(scrollY, 0, 568, Float(tilePileCenter.y), Float(tileGridCenter.y)))
             );
             
-            pileAngle = tilePileAngles[i] as Float;
-            angle = convertValue(scrollY, 0, 568, pileAngle, 0);
+            pileAngle = tilePileAngles[i];
+            angle = convertValue(scrollY, 0, 568, Float(pileAngle), 0);
             
             pileScale = (i == 0) ? 1 : 1.75;
             scale = convertValue(scrollY, 0, 568, pileScale, 1);
