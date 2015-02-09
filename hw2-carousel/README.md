@@ -1,4 +1,4 @@
-<h1>Dropbox</h1>
+<h1>Carousel</h1>
 <img src="https://raw.githubusercontent.com/bkobash/ios-designers-swift/master/hw2-carousel/hw2-carousel.gif" width="320" height="568" /><br />
 
 <b>Hours to complete:</b> 5<br />
