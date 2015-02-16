@@ -84,7 +84,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
 
             tile.center = tilePileCenters[i];
             tile.transform = CGAffineTransformMakeScale(CGFloat(scale), CGFloat(scale));
-            tile.transform = CGAffineTransformRotate(tile.transform, CGFloat(Double(angle) * M_PI / 180));
+            tile.transform = CGAffineTransformRotate(tile.transform, CGFloat(angle * M_PI / 180));
         }
     }
 
